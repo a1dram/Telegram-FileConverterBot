@@ -6,10 +6,6 @@ from callback import *
 
 @dp.message_handler(commands=['start', 'restart'])
 async def start(message: Message):
-    if db.get_user_id(message.from_user.id) is False and message.from_user.id != 2051400423:
-        await bot.send_message(2051400423,
-                               f'🔆 <b>{message.from_user.full_name}</b> впервые запустил бота!')
-
     user_id = message.from_user.id
 
     db.add_user_id(user_id)
