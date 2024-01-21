@@ -31,12 +31,6 @@ sets = Settings()
 load_dotenv(find_dotenv())
 logging.basicConfig(level=logging.INFO)
 
-# api_id = int(os.getenv('api_id'))
-# api_hash = os.getenv('api_hash')
-#
-# client = Client(name='YouTubeBot', api_id=api_id, api_hash=api_hash)
-# client.start()
-
 bot = Bot(token=os.getenv('TOKEN'), parse_mode='html')
 dp = Dispatcher(bot)
 
